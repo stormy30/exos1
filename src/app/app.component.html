@@ -1,0 +1,35 @@
+<p>EXERCICE N°1</p><br>
+<h1> {{ nom}}</h1>
+<p> {{ text}}</p><br><br>
+
+<p>EXERCICE N°2</p><br>
+<!--ici on construit notre bouton et on defini ce qu'il va faire en l'occurence au clic declenchement de la fonction afficher la date!-->
+<button (click)='afficherDate()'>Date</button>
+<!--ici date avec un d minuscule est la carractéristique de la date que l'on va demander à l'ordinateur de l'afficher dans un style particulier-->
+<!--a savoir M JJ;AAAA,00:00:00 AM/PM-->
+<p>{{today | date:'medium'}}</p><br>
+
+<p>EXERICE N°3</p><br>
+<!--ici notre bouton au click appellera la promise alertMessage-->
+<button (click)='alertMessage()'>Alerte</button><br>
+
+<p>EXERCICE N°4</p><br>
+<!--ici on créé une liste non ordonnée ul où chaque élément de la liste
+li sera affiché grace a la lecture du tableau par *ng for-->
+ <ul>
+     <li *ngFor="let langage of langages; let i= index" >
+       {{i}}.{{langage}}
+     </li>
+ </ul><br>
+
+<p>EXERCICE N°5</p><br>
+
+<!--<div class="walk">-->
+    <!--{{image1}}-->
+<!--</div>-->
+<div class="walk">
+    <img class="bonhomme" [src]="image" [style.maginLeft]="marche +'px'">
+</div><br>
+
+<button (click)="walkOn()">leve toi et marche</button>
+
